@@ -1,0 +1,6 @@
+// R command
+instal.packages("arules")
+library("arules")
+tagList=read.transactions("c:\\tags.csv",sep=",")
+rules=apriori(data=tagList,parameter=list(sup=0.0007,conf=0.5,target="rules"))
+inspect(rules)
